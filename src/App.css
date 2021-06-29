@@ -48,11 +48,14 @@
   padding: 0px 10px ;
   font-size: 1.3rem;
   font-weight: bold;
-  color: rgb(110, 110, 110);
+  color: rgb(117, 117, 117);
   width: 65%;
   height: 30px;
   margin-top: 30px;
   text-align: center;
+}
+::placeholder{
+  color: rgb(182, 182, 182);
 }
 input:focus {
   outline:none;
@@ -69,7 +72,9 @@ input:focus {
 }
 .card{
   width: 100%;
-  background-color: brown;
+  background-color: rgb(233, 233, 233);
+  color: rgb(95, 95, 95);
+  font-size: 1.2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -81,4 +86,10 @@ input:focus {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
+  border: none;
+  color: rgb(233, 233, 233);
+  background-color: rgb(187, 107, 187);
+  font-size: 1rem;
+  font-weight: bolder;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
 }

@@ -34,8 +34,11 @@ const Main = () => {
                             onChange={(event) => setInputSate(event.target.value)} />
                         <button className='btn'
                             onClick={() => {
-                                dispatch(addToDo(inputData))
-                                setInputSate('')
+                                if(inputData != '')
+                                {
+                                    dispatch(addToDo(inputData))
+                                    setInputSate('')
+                                }
                             }}>
                             +
                         </button>
