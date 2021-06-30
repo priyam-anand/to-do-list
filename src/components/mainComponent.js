@@ -8,7 +8,7 @@ const Main = () => {
     const dispatch = useDispatch();
     const toDoState = useSelector((state) => state.todoReducer);
 
-    const comment = toDoState.list.map((comm) => {
+    const events = toDoState.list.map((comm) => {
         return (
             <div key={comm.id} className='card'>
                 <button className='del-btn' onClick={() => {
@@ -43,7 +43,10 @@ const Main = () => {
                             +
                         </button>
                     </div>
-                    {comment}
+                    <div className className='events'>
+                        {events}
+                    </div>
+                    
                 </div>
             </div>
         </>

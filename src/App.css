@@ -13,7 +13,7 @@
 }
 .main{
   width: 25%;
-  min-height: 65vh;
+  height: 65vh;
   border-radius: 5%;
   background-color: rgb(233, 233, 233);
   display: flex;
@@ -93,4 +93,8 @@ input:focus {
   font-size: 1rem;
   font-weight: bolder;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
+}
+.events{
+  width: 90%;
+  overflow-y: auto;
 }
