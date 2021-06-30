@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import '../App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToDo, removeToDo } from '../redux/actions';
-import { todoReducer } from '../redux/reducer/todoReducer'
+// import { toDoReducer } from '../redux/reducer/todoReducer';
+
 const Main = () => {
     const [inputData, setInputSate] = useState('');
     const dispatch = useDispatch();
-    const toDoState = useSelector((state) => state.todoReducer);
+    const toDoState = useSelector((state) => state.toDoReducer);
 
     const events = toDoState.list.map((comm) => {
         return (
@@ -34,7 +35,7 @@ const Main = () => {
                             onChange={(event) => setInputSate(event.target.value)} />
                         <button className='btn'
                             onClick={() => {
-                                if(inputData != '')
+                                if(inputData !== '')
                                 {
                                     dispatch(addToDo(inputData))
                                     setInputSate('')
@@ -43,7 +44,7 @@ const Main = () => {
                             +
                         </button>
                     </div>
-                    <div className className='events'>
+                    <div className='events'>
                         {events}
                     </div>
                     

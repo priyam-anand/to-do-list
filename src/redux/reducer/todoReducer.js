@@ -2,7 +2,7 @@ const initalState = {
     list : []
 }
 
-const todoReducer = (state=initalState,action) => {
+const toDoReducer = (state=initalState,action) => {
     switch(action.type){
         case 'ADD_TODO' : 
             const id = action.payload.id;
@@ -14,7 +14,7 @@ const todoReducer = (state=initalState,action) => {
             const delId = action.payload;
             const newList1 = [];
             state.list.forEach((value)=> {
-                if(value.id != delId)
+                if(value.id !== delId)
                     newList1.push(value);
             })
             return {...state,list:newList1};
@@ -22,4 +22,4 @@ const todoReducer = (state=initalState,action) => {
             return state
     }
 }
-export default todoReducer;
+export default toDoReducer;
