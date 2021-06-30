@@ -4,15 +4,16 @@
 }
 .container{
   background-color: #70839b;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  /* height: 100%; */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main{
   width: 25%;
-  height: 65%;
+  min-height: 65vh;
   border-radius: 5%;
   background-color: rgb(233, 233, 233);
   display: flex;
